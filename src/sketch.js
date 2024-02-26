@@ -1,6 +1,5 @@
 let x2 = 75
 let r1 = 0
-let clicked1 = false
 let clicked2 = false
 
 function setup() {
@@ -25,14 +24,14 @@ function draw() {
   fill('#E2A624')
   triangle(0,400,200,200,0,0)
   //----------------creatures-------------------//
-  drawCreature1(200, 200,r1)
+  drawCreature1(200, 200, r1)
   drawCreature2(x2, 75)
 
-  if (clicked1){
-    r1 = r1 + PI/2
-  }
   if (clicked2){
     x2 = x2 + 1
+  }
+  if (x2 > 400){
+    r1 = r1 + PI/2
   }
 }
 
@@ -103,9 +102,6 @@ function drawCreature2(x2,y2){
 }
 
 function mouseClicked(){
-  if (mouseX > 30 && mouseX < 120 && mouseY > 30 && mouseY < 120){
-    clicked1 = true;
-  }
   if (mouseX > 125 && mouseX < 275 && mouseY > 148 && mouseY < 248){
     clicked2 = true;
   }
