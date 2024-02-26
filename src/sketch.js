@@ -1,4 +1,5 @@
-let x2 = 0
+let x2 = 75
+let clicked = false
 
 function setup() {
   // These lines are fitting our canvas
@@ -24,8 +25,9 @@ function draw() {
   //----------------creatures-------------------//
   drawCreature1(200, 200)
   drawCreature2(x2, 75)
-
-  x2 = x2 + 1
+  if (clicked){
+    x2 = x2 + 1
+  }
 }
 
 function drawCreature1(x1,y1){
@@ -91,4 +93,10 @@ function drawCreature2(x2,y2){
     fill('#6C579A')
     rect(-22,-45,44,7)
   pop();
+}
+
+function mouseClicked(){
+  if (mouseX > 125 && mouseX < 275 && mouseY > 148 && mouseY < 248){
+    clicked = true;
+  }
 }
