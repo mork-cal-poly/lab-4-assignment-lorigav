@@ -1,3 +1,5 @@
+let x2 = 0
+
 function setup() {
   // These lines are fitting our canvas
   // where we want in the DOM
@@ -21,12 +23,14 @@ function draw() {
   triangle(0,400,200,200,0,0)
   //----------------creatures-------------------//
   drawCreature1(200, 200)
-  drawCreature2(75, 75)
+  drawCreature2(x2, 75)
+
+  x2 = x2 + 1
 }
 
-function drawCreature1(x,y){
+function drawCreature1(x1,y1){
   push();
-    translate(x, y);
+    translate(x1, y1);
     strokeWeight(1)
       //body
       fill('#94491E')
@@ -66,9 +70,9 @@ function drawCreature1(x,y){
     pop();
 }
 
-function drawCreature2(x,y){
+function drawCreature2(x2,y2){
   push();
-    translate(x,y);
+    translate(x2,y2);
     stroke('#362C4D')
     strokeWeight(1)
     //hat1
