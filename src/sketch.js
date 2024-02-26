@@ -25,6 +25,7 @@ function draw() {
   triangle(0,400,200,200,0,0)
   //----------------creatures-------------------//
   drawCreature1(200, 200, r1)
+  drawBird(75,75)
   drawCreature2(x2, 75)
 
   if (clicked2){
@@ -98,6 +99,29 @@ function drawCreature2(x2,y2){
     //hat2
     fill('#6C579A')
     rect(-22,-45,44,7)
+  pop();
+}
+
+function drawBird(x3, y3){
+  push();
+  translate(x3, y3);
+  fill(255, 255, 0);
+  ellipse(0, 0, 30, 30);
+  
+  // Wings
+  fill(255, 255, 0);
+  ellipse(-15, 0, 15, 10);
+  ellipse(15, 0, 15, 10);
+  
+  // Beak
+  fill(255, 165, 0);
+  triangle(0, 0, 5, 5, 0, 8);
+  
+  // Eyes
+  fill(0);
+  ellipse(-5, -3, 3, 3);
+  ellipse(5, -3, 3, 3);
+  
   pop();
 }
 
