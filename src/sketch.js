@@ -9,6 +9,17 @@ function setup() {
 
 function draw() {
   background(220);
+  //----------------background-------------------//
+  strokeWeight(0)
+  fill('#E2C924')
+  triangle(0,0,200,200,400,0)
+  fill('#E2A624')
+  triangle(400,0,200,200,400,400)
+  fill('#E2C924')
+  triangle(400,400,200,200,0,400)
+  fill('#E2A624')
+  triangle(0,400,200,200,0,0)
+  //----------------creatures-------------------//
   drawCreature1(200, 200)
   drawCreature2(75, 75)
 }
@@ -16,6 +27,7 @@ function draw() {
 function drawCreature1(x,y){
   push();
     translate(x, y);
+    strokeWeight(1)
       //body
       fill('#94491E')
       rect(-95,-80,190,150,50,50,40,40)
