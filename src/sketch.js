@@ -1,5 +1,7 @@
 let x2 = 75
-let clicked = false
+let r1 = 0
+let clicked1 = false
+let clicked2 = false
 
 function setup() {
   // These lines are fitting our canvas
@@ -23,16 +25,17 @@ function draw() {
   fill('#E2A624')
   triangle(0,400,200,200,0,0)
   //----------------creatures-------------------//
-  drawCreature1(200, 200)
+  drawCreature1(200, 200,r1)
   drawCreature2(x2, 75)
   if (clicked){
     x2 = x2 + 1
   }
 }
 
-function drawCreature1(x1,y1){
+function drawCreature1(x1,y1,r1){
   push();
     translate(x1, y1);
+    rotate(r1);
     strokeWeight(1)
       //body
       fill('#94491E')
