@@ -10,6 +10,7 @@ function setup() {
 function draw() {
   background(220);
   drawCreature1(200, 200)
+  drawCreature2(75, 75)
 }
 
 function drawCreature1(x,y){
@@ -51,4 +52,27 @@ function drawCreature1(x,y){
       triangle(-75,-35,-75,75,-110,35)
       triangle(75,-35,75,75,110,35)
     pop();
+}
+
+function drawCreature2(x,y){
+  push();
+    translate(x,y);
+    stroke('#362C4D')
+    strokeWeight(1)
+    //hat1
+    fill('#6C579A')
+    circle(0,-45,35)
+    //head
+    fill('#D9CF66')
+    circle(0,0,90)
+    //eyes
+    fill('#362C4D')
+    circle(-20,-10,10)
+    circle(20,-10,10)
+    //smile
+    curve(-30,10,-10,25,10,25,30,10)
+    //hat2
+    fill('#6C579A')
+    rect(-22,-45,44,7)
+  pop();
 }
