@@ -27,7 +27,11 @@ function draw() {
   //----------------creatures-------------------//
   drawCreature1(200, 200,r1)
   drawCreature2(x2, 75)
-  if (clicked){
+
+  if (clicked1){
+    r1 = r1 + PI/2
+  }
+  if (clicked2){
     x2 = x2 + 1
   }
 }
@@ -99,7 +103,10 @@ function drawCreature2(x2,y2){
 }
 
 function mouseClicked(){
+  if (mouseX > 30 && mouseX < 120 && mouseY > 30 && mouseY < 120){
+    clicked1 = true;
+  }
   if (mouseX > 125 && mouseX < 275 && mouseY > 148 && mouseY < 248){
-    clicked = true;
+    clicked2 = true;
   }
 }
